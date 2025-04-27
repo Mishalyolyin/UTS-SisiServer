@@ -14,8 +14,8 @@ Proyek ini adalah pengembangan aplikasi manajemen inventaris sederhana berbasis 
    - Menyiapkan file `docker-compose.yml` untuk menjalankan service MySQL.
    - Menyambungkan Django ke database MySQL dengan setting:
      - Nama database: `inventory_db`
-     - Username: `inventory_user`
-     - Password: `password123`
+     - Username: `Eveye`
+     - Password: `12345678`
      - Host: `127.0.0.1`
      - Port: `3306`
    - Membuat file migrasi awal dan migrasi database (`makemigrations` dan `migrate`).
