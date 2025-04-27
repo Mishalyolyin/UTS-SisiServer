@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block navbar_title %}Dashboard{% endblock %}
+
+{% block content %}
+<h2>Welcome to Inventory Dashboard</h2>
+
+<div class="dashboard-cards">
+    <div class="card">
+        <div class="card-info">
+            <h3>Total Stock</h3>
+            <p>{{ total_stock }}</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-info">
+            <h3>Total Value</h3>
+            <p>${{ total_value }}</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-info">
+            <h3>Average Price</h3>
+            <p>${{ avg_price }}</p>
+        </div>
+    </div>
+</div>
+
+<h3 style="margin-top: 30px;">Low Stock Items</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in low_stock_items %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.stock }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No low stock items</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

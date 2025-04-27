@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Category Form{% endblock %}
+{% block navbar_title %}Category Form{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>{{ title }}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="id_name">Name:</label>
+            {{ form.name }}
+        </div>
+        <div class="form-group">
+            <label for="id_description">Description:</label>
+            {{ form.description }}
+        </div>
+        <button type="submit" class="btn-submit">Save</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}Stock Summary{% endblock %}
+{% block navbar_title %}Summary{% endblock %}
+
+{% block content %}
+<h2>Stock Summary</h2>
+
+<div class="dashboard-cards">
+    <div class="card">
+        <div class="card-info">
+            <h3>Total Stock</h3>
+            <p>{{ total_stock }}</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-info">
+            <h3>Total Value of Stock</h3>
+            <p>${{ total_value }}</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-info">
+            <h3>Average Price</h3>
+            <p>${{ avg_price }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

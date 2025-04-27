@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}Delete Item{% endblock %}
+{% block navbar_title %}Delete Item{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Are you sure you want to delete "{{ item.name }}"?</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn-submit" style="background-color: #dc2626;">Confirm Delete</button>
+    </form>
+</div>
+{% endblock %}
